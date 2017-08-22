@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Lrc">
+        <attr name="text" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="rows" format="integer" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="normalTextColor" format="color" />
+        <attr name="currentTextColor" format="color" />
+
+    </declare-styleable>
+</resources>
