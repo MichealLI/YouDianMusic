@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_down_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4F94CD"
+        android:padding="10dp"
+        android:text="下载记录"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DBDBDB"
+        android:padding="10dp"
+        android:text="正在下载"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/dowloadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <SeekBar
+            android:id="@+id/dseekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/downloadMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/seekBar"
+            android:text="下载音乐名" />
+
+        <Button
+            android:id="@+id/continueD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dseekBar"
+            android:layout_marginRight="6dp"
+            android:text="继续" />
+
+        <Button
+            android:id="@+id/pauseD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dseekBar"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/continueD"
+            android:text="暂停" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DBDBDB"
+        android:padding="10dp"
+        android:text="已经下载"
+        android:textSize="20sp" />
+
+
+    <ListView
+        android:id="@+id/downloadList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

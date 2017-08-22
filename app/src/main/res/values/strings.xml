@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YDmusic</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="page_name_login">登录有点音乐</string>
+    <string name="page_name_register">注册有点音乐</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
