@@ -10,6 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            moduleName "MingJni"          //生成的so名字
+            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种abi体系结构下的so库，目前可有可无。
+             }
     }
     buildTypes {
         release {
@@ -17,7 +22,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -33,4 +44,11 @@ dependencies {
     //  rxjava 本例中线程切换要用到，代替handler
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
+
+    //compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+    //compile 'com.github.yalantis:Side-Menu.Android:1.0.1'
+
+    //compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+    compile 'com.github.yalantis:Side-Menu.Android:1.0.1'
+
 }

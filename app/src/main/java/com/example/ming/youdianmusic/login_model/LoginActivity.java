@@ -19,7 +19,7 @@ import com.example.ming.youdianmusic.MainActivity;
 import com.example.ming.youdianmusic.MyApp;
 import com.example.ming.youdianmusic.R;
 import com.example.ming.youdianmusic.common.MusicUser;
-import com.example.ming.youdianmusic.register_model.RegisterActivity;
+import com.example.ming.youdianmusic.util.JniUtil;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -30,7 +30,6 @@ import java.net.URLEncoder;
 
 
 public class LoginActivity extends Activity implements OnClickListener {
-
     EditText loginUsername, loginPassword;
     TextView logInfo;
     Button btLogin, btRegister;
@@ -176,9 +175,13 @@ public class LoginActivity extends Activity implements OnClickListener {
                 }).start();
                 break;
             case R.id.loginbt_reg:
-                Intent intent1 = new Intent(LoginActivity.this,
-                        RegisterActivity.class);
-                startActivity(intent1);
+                String pwd = loginPassword.getText().toString()
+                        .trim();
+                String enPwd = JniUtil.encryptPassword(pwd);
+                Toast.makeText(myApp, enPwd, Toast.LENGTH_SHORT).show();
+//                Intent intent1 = new Intent(LoginActivity.this,
+//                        RegisterActivity.class);
+//                startActivity(intent1);
                 break;
         }
     }

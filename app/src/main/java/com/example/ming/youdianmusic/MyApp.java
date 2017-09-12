@@ -54,7 +54,6 @@ public class MyApp extends Application {
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.e("Ming", "服务连接成功");
             myBinder = (MyBinder) service;
-
         }
 
         /**
@@ -75,8 +74,6 @@ public class MyApp extends Application {
 
         //获取本地歌曲列表
         getLocalMusicList();
-
-
     }
 
     /**
